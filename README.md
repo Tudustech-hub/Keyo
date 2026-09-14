@@ -1,2 +1,3 @@
 # Keyo
-Keyo is a macropad for everything
+![C++](https://ziadoua.github.io/m3-Markdown-Badges/badges/C++/c++3.svg)
+---
