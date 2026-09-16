@@ -1,7 +1,7 @@
 <div align="center">
 <img src=https://github.com/Tudustech-hub/Keyo/blob/main/images/Group%203.png />
 
-  <img src="https://github.com/Tudustech-hub/Keyo/blob/main/images/Group%204(1).png/" width="170"/>
+<img src="https://github.com/Tudustech-hub/Keyo/blob/main/images/Group%204(1).png/" width="170"/>
 </div> 
 
 Keyo Is An macropad that has:
