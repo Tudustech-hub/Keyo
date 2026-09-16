@@ -1,6 +1,6 @@
 <div align="center">
 <h1><img src=https://github.com/Tudustech-hub/Keyo/blob/main/images/Group%203.png /></h1>
-<h6><img src="https://github.com/Tudustech-hub/Keyo/blob/main/images/Group%204(1).png/" width="150"/></h6>></h6>
+<img src="https://github.com/Tudustech-hub/Keyo/blob/main/images/Group%204(1).png/" width="100"/>
 </div> 
 
 Keyo Is An macropad that has:
