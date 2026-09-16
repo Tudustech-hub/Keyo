@@ -2,7 +2,7 @@
 <h1>KEYO</h1>
   <img src=https://ziadoua.github.io/m3-Markdown-Badges/badges/C++/c++3.svg />
 </div> 
----
+
 Keyo Is An macropad that has:
 
 1. **9** Mechanical Interchangable Keys
