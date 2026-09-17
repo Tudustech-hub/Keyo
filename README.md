@@ -10,9 +10,16 @@ Keyo Is An macropad that has:
 3. An **0.91 INCH Qled Screen** that *(for now)* shows only what key you last pressed
 4. Non-Slide Feet
 
-<a href="https://github.com/Tudustech-hub/Keyo/edit/main/README.md" target="_blank">
-  <img src="https://github.com/Tudustech-hub/Keyo/blob/main/images/Group%205.png" alt="Code" width="50">
+<a href="https://github.com/Tudustech-hub/Keyo/Code.ino" target="_blank">
+  <img src="https://github.com/Tudustech-hub/Keyo/blob/main/images/Group%205.png" alt="Code" width="100">
 </a>
+<a href="https://github.com/Tudustech-hub/Keyo/Pcb_Files/" target="_blank">
+  <img src="https://github.com/Tudustech-hub/Keyo/blob/main/images/Group%206.png" alt="Pcb" width="100">
+</a>
+<a href="https://github.com/Tudustech-hub/Keyo/tree/main/3D%20Model" target="_blank">
+  <img src="https://github.com/Tudustech-hub/Keyo/blob/main/images/Group%207.png" alt="Models" width="100">
+</a>
+
 
 ---
 
