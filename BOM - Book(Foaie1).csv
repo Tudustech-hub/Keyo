@@ -1,0 +1,13 @@
+Name,Category,Qty,Price,,,,Name,,Designator,Qty,Price
+Gerber_PCB1.zip,PCB,5,"$4,00",,,,CF1/6W-5.1KΩ±5% T,,"R1,R2",15,"$0,0885"
+Gerber_PCB1.zip,PCB Assembly,2,"$65,38",,,,SH-1808SN-250gf,,"SW10,SW11",12,"$0,3756"
+Panel.stl,3D Print,1,"$2,09",,,,HS91L02W2C01,,OLED1,5,"$11,6600"
+Cap.stl,3D Print,1,"$0,58",,,,ME6211C33M5G-N,,LDO1,5,"$0,2990"
+Case.stl,3D Print,1,"$1,69",,,,OVETGLJANF-40MHZ,,X1,5,"$3,5235"
+C41430893,Part,20,"$3,90",,,,CL05A104KA5NNNC,,"C1,C2,C3,C4,C5",35,"$0,2275"
+,,,,,,,CPG151101S11-16,,"SW1,SW2,SW3,SW4,SW5,SW6,SW7,SW8,SW9",20,"$0,9000"
+,Shipping (Part),,"$10,20",,,,ESP32-S3,,U1,5,"$14,3940"
+,Shipping,,"$34,40",,,,TYPE-C16PIN,,USB1,5,"$0,3435"
+,Coupon,1,"-$10,00",,,,MF2WS-10KΩ±1%T,,R3,6,"$0,2472"
+,,,,,,,,,,Total,"$32,06"
+,TOTAL PRICE,,"$112,24",,,,,,,,
