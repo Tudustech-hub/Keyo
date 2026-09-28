@@ -21,6 +21,19 @@ Keyo Is An macropad that has:
 </a>
 
 
+### Fully Assembled Render
+![Overall Macropad Render](https://github.com/Tudustech-hub/Keyo/blob/main/images/KEYO.stl)
+
+### Case Mechanics
+![3D Case Layout](https://github.com/Tudustech-hub/Keyo/blob/main/images/Screenshot_20260928_101217.png)
+
+### Circuit Schematic
+![Schematic Screenshot](https://github.com/Tudustech-hub/Keyo/blob/main/images/Screenshot_20260928_100404.png)
+
+### PCB Routing Layout
+![PCB Design Layout](https://github.com/Tudustech-hub/Keyo/blob/main/images/Screenshot_20260928_100446.png)
+
+
 ---
 
 
