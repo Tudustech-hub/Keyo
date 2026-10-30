@@ -6,12 +6,12 @@
 USBHIDKeyboard Keyboard;
 U8G2_SSD1306_128X32_UNIVISION_F_HW_I2C display(U8G2_R0, U8X8_PIN_NONE);
 
-// The GIPOs for the buttons
-const int KeyPins[9] = {1,2,4,6,7,8,10,11,12};
+// The GPIOs for the buttons (ESP32-S3)
+const int KeyPins[9] = {1, 2, 4, 6, 7, 8, 10, 11, 12};
 
 // ===============================
 // Change Your Key Characters Here
-//================================
+// ===============================
 // "copy" for copy
 // "paste" for paste
 // "cut" for cut
@@ -19,7 +19,7 @@ const int KeyPins[9] = {1,2,4,6,7,8,10,11,12};
 // "redo" for redo
 // "save" for save
 // "selectall" to select all
-// "mute"   for mute
+// "mute" for mute
 // "volup" for volume up
 // "voldown" for volume down
 // "playpause" for play/pause
@@ -32,67 +32,36 @@ const char* KeyActions[9] = {
     "undo",      // Key 4
     "redo",      // Key 5
     "save",      // Key 6
-    "mute", // Key 7
+    "mute",      // Key 7
     "voldown",   // Key 8
     "volup"      // Key 9
 };
 
 const char* KeyLabels[9] = {
-    "copy", "paste", "undo",
-    "cut", "redo", "save",
-    "mute", "voldown", "volup"
+    "Copy", "Paste", "Cut",
+    "Undo", "Redo", "Save",
+    "Mute", "Vol -", "Vol +"
 };
 
 bool KeyState[9] = {false};
 String lastKey = "";
 
-void setup() {
-    for (int i = 0; i < 9; i++) {
-        pinMode(KeyPins[i], INPUT_PULLUP);
-    }
-    Keyboard.begin();
-    USB.begin();
-    Wire.begin(13, 14); // SDA AND SCL
-    display.begin();
-
-    display.clearBuffer();
-    display.setFont(u8g2_font_ncenB08_tr);
-    display.drawStr(10, 20, "Keyo");
-    display.sendBuffer();
-    delay(1000);
-
-    showIdleScreen();
-}
-void loop() {
-    for (int i = 0; i < 9; i++) {
-        bool pressed = (digitalRead(KeyPins[i]) == LOW);
-
-        if (pressed && !KeyState[i]) {
-            Keyboard.press(KeyChars[i]) ;
-            KeyState[i] = true;
-            lastKey = "Key " + String(i + 1);
-            updateDisplay();
-        } else if (!pressed && KeyState[i]) {
-            Keyboard.release(KeyChars[i]);
-            KeyState[i] = false;
-        }
-    }
-    delay(10);
-}
 void showIdleScreen() {
     display.clearBuffer();
     display.setFont(u8g2_font_ncenB08_tr);
     display.drawStr(10, 20 , "Press a key");
     display.sendBuffer();
 }
+
 void updateDisplay() {
     display.clearBuffer();
     display.setFont(u8g2_font_ncenB08_tr);
     display.drawStr(10, 20, lastKey.c_str());
     display.sendBuffer();
 }
+
 void sendShortcut(int index) {
-    String action = keyActions[index];
+    String action = KeyActions[index];
 
     if (action == "copy") {
         Keyboard.press(KEY_LEFT_CTRL);
@@ -144,6 +113,38 @@ void sendShortcut(int index) {
         Keyboard.press(key);
         Keyboard.releaseAll();
     }
-
 }
 
+void setup() {
+    for (int i = 0; i < 9; i++) {
+        pinMode(KeyPins[i], INPUT_PULLUP);
+    }
+    Keyboard.begin();
+    USB.begin();
+    Wire.begin(13, 14); // SDA (GPIO 13), SCL (GPIO 14)
+    display.begin();
+
+    display.clearBuffer();
+    display.setFont(u8g2_font_ncenB08_tr);
+    display.drawStr(10, 20, "Keyo");
+    display.sendBuffer();
+    delay(1000);
+
+    showIdleScreen();
+}
+
+void loop() {
+    for (int i = 0; i < 9; i++) {
+        bool pressed = (digitalRead(KeyPins[i]) == LOW);
+
+        if (pressed && !KeyState[i]) {
+            sendShortcut(i);
+            KeyState[i] = true;
+            lastKey = String(KeyLabels[i]);
+            updateDisplay();
+        } else if (!pressed && KeyState[i]) {
+            KeyState[i] = false;
+        }
+    }
+    delay(10);
+}
